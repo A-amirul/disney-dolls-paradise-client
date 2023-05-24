@@ -16,9 +16,9 @@ const AddAToy = () => {
 			.then(res => res.json())
 			.then(result => {
 				console.log(result);
-				if(result.insertedId) {
-					alert('Successfully added an item');
-
+				if (result.insertedId) {
+					alert('Successfully added')
+					
 				}
 
 			})
@@ -30,7 +30,7 @@ const AddAToy = () => {
 
 
 	return (
-		<div className="bg-base-200 px-4 md:px-64 pt-8 md:py-12">
+		<div className="bg-base-200 px-4 md:px-64 py-40 ">
 			<h1 className="text-xl md:text-4xl text-center font-medium">Please add a Toy</h1>
 			<div className="py-8 ">
 				<form onSubmit={handleSubmit(onSubmit)}>

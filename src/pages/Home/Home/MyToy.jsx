@@ -11,7 +11,6 @@ const MyToy = () => {
 	const { user } = useContext(AuthContext);
 
 	const toys = useLoaderData();
-	console.log(toys)
 
 	const userToys = toys?.filter(toy => user?.email === toy?.email);
 	useEffect(() => {
@@ -58,7 +57,7 @@ const MyToy = () => {
 		<div>
 
 
-			<div className="md:px-64 px-4 py-8 md:py-16 bg-base-200">
+			<div className="md:px-64 px-4 py-40 bg-base-200">
 
 
 				<h2 className="text-center font-medium md:text-4xl text-xl">My Toys: {myToys?.length}</h2>
@@ -68,7 +67,7 @@ const MyToy = () => {
 						{sortOrder === 'ascending' ? 'Click to Descending' : 'Click to Ascending'}
 					</button>
 				</div>
-				<div className="overflow-x-auto w-full">
+				<div className="overflow-x-auto w-full ">
 					<table className="table w-full">
 						{/* head */}
 						<thead>

@@ -14,8 +14,7 @@ import img from "/extra.gif";
 const Home = () => {
 	const [selectedValue, setSelectedValue] = useState('all');
 	const toys = useLoaderData();
-	const filteredData = selectedValue === 'all' ? toys : toys?.filter((item) => item?.sub_category === selectedValue);
-
+	
 	const handleTabChange = (value) => {
 		setSelectedValue(value);
 	};
@@ -23,14 +22,13 @@ const Home = () => {
 	const filteredItems = selectedValue === 'all' ? toys : toys.filter(item => item.sub_category === selectedValue);
 
 	useTitle('Home');
-	console.log(filteredData)
 
 	useEffect(() => {
 		AOS.init();
 	}, []);
 
 	return (
-		<div className=" bg-base-200">
+		<div className=" bg-base-200 py-28 md:py-0">
 			{/* banner */}
 			<div className="bg-cover  bg-no-repeat md:py-72 py-6 bg-[#2D4764]" style={{
 				backgroundImage: `url(${banner})`
@@ -109,7 +107,7 @@ const Home = () => {
 			</div>
 
 			{/* Extra section-2 */}
-			<section className=" py-8 bg-base-300" data-aos-anchor-placement="top-center" data-aos="fade-up" data-aos-duration="1000">
+			<section className=" py-8 bg-base-300">
 				<div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
 					<div className="text-center">
 						<h2 className="text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl">

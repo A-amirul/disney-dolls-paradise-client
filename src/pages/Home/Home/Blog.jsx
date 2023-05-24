@@ -3,7 +3,7 @@ import useTitle from "../../../useTitle";
 const Blog = () => {
 	useTitle('Blog');
 	return (
-		<div className="md:px-56 mx-auto bg-base-200">
+		<div className="md:px-56 mx-auto bg-base-200 py-40">
 			<div className="p-8 pt-10">
 				<h2 className="text-3xl font-bold">1. What is an access token and refresh token? How do they work and where should we store them on the client-side?</h2>
 				<div className="text-xl pt-4">

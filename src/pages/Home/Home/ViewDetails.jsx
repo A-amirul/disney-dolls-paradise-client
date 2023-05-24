@@ -23,7 +23,7 @@ const ViewDetails = () => {
 
 
 	return (
-		<div className="md:px-64 p-4 md:w-2/3 mx-auto my-8">
+		<div className="md:px-64 p-4 md:w-2/3 mx-auto py-40">
 
 			{
 				loading ? <>

@@ -14,6 +14,7 @@ const Header = () => {
 	}
 	const NavItems = <>
 		<li> <Link to="/">Home</Link></li>
+		<li><Link to="/about">About</Link></li>
 		<li><Link to="/allToys">All Toys</Link></li>
 		{
 			user?.email ?
@@ -28,7 +29,7 @@ const Header = () => {
 
 	</>
 	return (
-		<div className="navbar bg-white shadow-sm md:px-64">
+		<div className="navbar shadow-sm md:px-64 md:z-10 fixed bg-opacity-30  bg-black  md:text-white">
 			<div className="navbar-start">
 				<div className="dropdown">
 					<label tabIndex={0} className="btn btn-ghost lg:hidden">

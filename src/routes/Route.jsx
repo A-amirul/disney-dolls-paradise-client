@@ -11,6 +11,7 @@ import AllToys from "../pages/Home/Home/AllToys";
 import PrivateRoute from "./PrivateRoute";
 import ViewDetails from "../pages/Home/Home/ViewDetails";
 import UpdateToy from "../pages/Home/Home/UpdateToy";
+import About from "../pages/Home/Home/About";
 
 
 const router = createBrowserRouter([
@@ -23,6 +24,10 @@ const router = createBrowserRouter([
 				path: "/",
 				element: <Home></Home>,
 				loader: () => fetch("https://disney-dolls-paradise-server-side.vercel.app/alltoys")
+			},
+			{
+				path: "/about",
+				element:<About></About>
 			},
 			{
 				path: "/login",
