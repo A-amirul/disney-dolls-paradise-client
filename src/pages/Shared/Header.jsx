@@ -15,6 +15,7 @@ const Header = () => {
 	const NavItems = <>
 		<li> <Link to="/">Home</Link></li>
 		<li><Link to="/about">About</Link></li>
+		<li><Link to="/contact">Contact Us</Link></li>
 		<li><Link to="/allToys">All Toys</Link></li>
 		{
 			user?.email ?
@@ -30,7 +31,7 @@ const Header = () => {
 	</>
 	return (
 		<div className="navbar shadow-sm md:px-64 md:z-10 fixed bg-opacity-30  bg-black  md:text-white">
-			<div className="navbar-start">
+			<div className="navbar-center">
 				<div className="dropdown">
 					<label tabIndex={0} className="btn btn-ghost lg:hidden">
 						<svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
@@ -39,11 +40,11 @@ const Header = () => {
 						{NavItems}
 					</ul>
 				</div>
-				<Link to="/" className="font-bold text-xl">
-					<img className="mx-auto rounded-full" style={{ width: "80px", height: "70px" }} src={logo} alt="" />Disney<span className="text-amber-600">Dolls</span>
+				<Link to="/" className="font-bold md:text-xl md:flex items-center md:me-20">
+					<img className="mx-auto rounded-full" style={{ width: "80px", height: "70px" }} src={logo} alt="" /> Disney<span className="text-amber-600">Dolls</span>
 				</Link>
 			</div>
-			<div className="navbar-center hidden lg:flex">
+			<div className="navbar-start hidden lg:flex">
 				<ul className="menu menu-horizontal px-2 font-medium">
 					{NavItems}
 				</ul>

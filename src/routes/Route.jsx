@@ -12,6 +12,7 @@ import PrivateRoute from "./PrivateRoute";
 import ViewDetails from "../pages/Home/Home/ViewDetails";
 import UpdateToy from "../pages/Home/Home/UpdateToy";
 import About from "../pages/Home/Home/About";
+import Contact from "../pages/Home/Home/Contact/Contact";
 
 
 const router = createBrowserRouter([
@@ -28,6 +29,10 @@ const router = createBrowserRouter([
 			{
 				path: "/about",
 				element:<About></About>
+			},
+			{
+				path: "/contact",
+				element:<Contact></Contact>
 			},
 			{
 				path: "/login",
